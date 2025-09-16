@@ -1,0 +1,158 @@
+tasks:
+ - name: "mortality"
+   outcome: "hospital_death"
+   predictors: ["age", "gender", "bmi", "icu_los_days", "apache_post_operative", "pre_icu_los_days", "aids", "immunosuppression", "leukemia", "cirrhosis", 
+     "hepatic_failure", "lymphoma", "solid_tumor_with_metastasis", "elective_surgery", 
+     "gcs_apache", "heart_rate_apache", "map_apache", "urineoutput_apache", 
+     "resprate_apache", "temp_apache", "fio2_apache",  "hematocrit_apache", 
+     "pao2_apache", "paco2_apache", "ph_apache", "albumin_apache", "bilirubin_apache", 
+     "bun_apache", "creatinine_apache", "glucose_apache",  "sodium_apache",  "wbc_apache", "ventilated_apache", 
+     "intubated_apache"]
+  
+  
+ - name: "icu_los_48h"
+   outcome: "icu_los_48h"
+   predictors: [ "age", "gender", "bmi",   "apache_post_operative", "pre_icu_los_days", "aids", "immunosuppression", "leukemia", "cirrhosis", 
+     "hepatic_failure", "lymphoma", "solid_tumor_with_metastasis", "elective_surgery", 
+     "gcs_apache", "heart_rate_apache", "map_apache", "urineoutput_apache", 
+     "resprate_apache", "temp_apache", "fio2_apache",  "hematocrit_apache", 
+     "pao2_apache", "paco2_apache", "ph_apache", "albumin_apache", "bilirubin_apache", 
+     "bun_apache", "creatinine_apache", "glucose_apache",  "sodium_apache",  "wbc_apache", "ventilated_apache", 
+     "intubated_apache"]
+  
+ - name: "icu_los_7d"
+   outcome: "icu_los_7d"
+   predictors: [ "age", "gender", "bmi",   "apache_post_operative", "pre_icu_los_days", "aids", "immunosuppression", "leukemia", "cirrhosis", 
+     "hepatic_failure", "lymphoma", "solid_tumor_with_metastasis", "elective_surgery", 
+     "gcs_apache", "heart_rate_apache", "map_apache", "urineoutput_apache", 
+     "resprate_apache", "temp_apache", "fio2_apache",  "hematocrit_apache", 
+     "pao2_apache", "paco2_apache", "ph_apache", "albumin_apache", "bilirubin_apache", 
+     "bun_apache", "creatinine_apache", "glucose_apache",  "sodium_apache",  "wbc_apache", "ventilated_apache", 
+     "intubated_apache"]
+ 
+ - name: "discharged_to_home"
+   outcome: "discharged_to_home"
+   predictors: [ "age", "gender", "bmi",   "apache_post_operative", "pre_icu_los_days", "aids", "immunosuppression", "leukemia", "cirrhosis", 
+       "hepatic_failure", "lymphoma", "solid_tumor_with_metastasis", "elective_surgery", 
+       "gcs_apache", "heart_rate_apache", "map_apache", "urineoutput_apache", 
+       "resprate_apache", "temp_apache", "fio2_apache",  "hematocrit_apache", 
+       "pao2_apache", "paco2_apache", "ph_apache", "albumin_apache", "bilirubin_apache", 
+       "bun_apache", "creatinine_apache", "glucose_apache",  "sodium_apache",  "wbc_apache", "ventilated_apache", 
+       "intubated_apache"]
+       
+# diagnostic models
+ - name: "age_65_plus"
+   outcome: "is_age_65_plus"
+   predictors: ["gender", "bmi", "icu_los_days",  "apache_post_operative", "pre_icu_los_days", "aids", "immunosuppression", "leukemia", "cirrhosis", 
+     "hepatic_failure", "lymphoma", "solid_tumor_with_metastasis", "elective_surgery", 
+     "gcs_apache", "heart_rate_apache", "map_apache", "urineoutput_apache", 
+     "resprate_apache", "temp_apache", "fio2_apache",  "hematocrit_apache", 
+     "pao2_apache", "paco2_apache", "ph_apache", "albumin_apache", "bilirubin_apache", 
+     "bun_apache", "creatinine_apache", "glucose_apache",  "sodium_apache",  "wbc_apache", "ventilated_apache", 
+     "intubated_apache"]   
+
+ - name: "gender"
+   outcome: "gender"
+   predictors: ["age", "bmi", "icu_los_days",  "apache_post_operative", "pre_icu_los_days", "aids", "immunosuppression", "leukemia", "cirrhosis", 
+     "hepatic_failure", "lymphoma", "solid_tumor_with_metastasis", "elective_surgery", 
+     "gcs_apache", "heart_rate_apache", "map_apache", "urineoutput_apache", 
+     "resprate_apache", "temp_apache", "fio2_apache",  "hematocrit_apache", 
+     "pao2_apache", "paco2_apache", "ph_apache", "albumin_apache", "bilirubin_apache", 
+     "bun_apache", "creatinine_apache", "glucose_apache",  "sodium_apache",  "wbc_apache", "ventilated_apache", 
+     "intubated_apache"]
+
+ - name: "ethnicity"
+   outcome: "ethnicity"
+   predictors: ["age"
+    , "gender", "bmi", "icu_los_days",  "apache_post_operative", "pre_icu_los_days", "aids", "immunosuppression", "leukemia", "cirrhosis", 
+     "hepatic_failure", "lymphoma", "solid_tumor_with_metastasis", "elective_surgery", 
+     "gcs_apache", "heart_rate_apache", "map_apache", "urineoutput_apache", 
+     "resprate_apache", "temp_apache", "fio2_apache",  "hematocrit_apache", 
+     "pao2_apache", "paco2_apache", "ph_apache", "albumin_apache", "bilirubin_apache", 
+     "bun_apache", "creatinine_apache", "glucose_apache",  "sodium_apache",  "wbc_apache", "ventilated_apache", 
+     "intubated_apache"]
+  
+ - name: "bmi_25_plus"
+   outcome: "is_bmi_25_plus"
+   predictors: ["age", "gender", "icu_los_days",  "apache_post_operative", "pre_icu_los_days", "aids", "immunosuppression", "leukemia", "cirrhosis", 
+     "hepatic_failure", "lymphoma", "solid_tumor_with_metastasis", "elective_surgery", 
+     "gcs_apache", "heart_rate_apache", "map_apache", "urineoutput_apache", 
+     "resprate_apache", "temp_apache", "fio2_apache",  "hematocrit_apache", 
+     "pao2_apache", "paco2_apache", "ph_apache", "albumin_apache", "bilirubin_apache", 
+     "bun_apache", "creatinine_apache", "glucose_apache",  "sodium_apache",  "wbc_apache", "ventilated_apache", 
+     "intubated_apache"]
+
+ - name: "bmi_30_plus"
+   outcome: "is_bmi_30_plus"
+   predictors: ["age", "gender", "icu_los_days",  "apache_post_operative", "pre_icu_los_days", "aids", "immunosuppression", "leukemia", "cirrhosis", 
+     "hepatic_failure", "lymphoma", "solid_tumor_with_metastasis", "elective_surgery", 
+     "gcs_apache", "heart_rate_apache", "map_apache", "urineoutput_apache", 
+     "resprate_apache", "temp_apache", "fio2_apache",  "hematocrit_apache", 
+     "pao2_apache", "paco2_apache", "ph_apache", "albumin_apache", "bilirubin_apache", 
+     "bun_apache", "creatinine_apache", "glucose_apache",  "sodium_apache",  "wbc_apache", "ventilated_apache", 
+     "intubated_apache"]
+
+ - name: "height_170_plus"
+   outcome: "is_height_170_plus"
+   predictors: ["icu_los_days",  "apache_post_operative", "pre_icu_los_days", "aids", "immunosuppression", "leukemia", "cirrhosis", 
+     "hepatic_failure", "lymphoma", "solid_tumor_with_metastasis", "elective_surgery", 
+     "gcs_apache", "heart_rate_apache", "map_apache", "urineoutput_apache", 
+     "resprate_apache", "temp_apache", "fio2_apache",  "hematocrit_apache", 
+     "pao2_apache", "paco2_apache", "ph_apache", "albumin_apache", "bilirubin_apache", 
+     "bun_apache", "creatinine_apache", "glucose_apache",  "sodium_apache",  "wbc_apache", "ventilated_apache", 
+     "intubated_apache"]
+
+ - name: "post_operative"
+   outcome: "post_operative"
+   predictors: ["age", "gender","bmi", "icu_los_days",  "pre_icu_los_days", "aids", "immunosuppression", "leukemia", "cirrhosis", 
+     "hepatic_failure", "lymphoma", "solid_tumor_with_metastasis", 
+     "gcs_apache", "heart_rate_apache", "map_apache", "urineoutput_apache", 
+     "resprate_apache", "temp_apache", "fio2_apache",  "hematocrit_apache", 
+     "pao2_apache", "paco2_apache", "ph_apache", "albumin_apache", "bilirubin_apache", 
+     "bun_apache", "creatinine_apache", "glucose_apache",  "sodium_apache",  "wbc_apache", "ventilated_apache", 
+     "intubated_apache"]
+
+ - name: "mechanical_ventilation_day1"
+   outcome: "mech_vent_day1"
+   predictors:  ["age", "gender","bmi", "icu_los_days",  "pre_icu_los_days", "aids", "immunosuppression", "leukemia", "cirrhosis", 
+     "hepatic_failure", "lymphoma", "solid_tumor_with_metastasis", 
+     "gcs_apache", "heart_rate_apache", "map_apache", "urineoutput_apache", "resprate_apache", "temp_apache", "fio2_apache",  "hematocrit_apache", 
+     "pao2_apache", "paco2_apache", "ph_apache", "albumin_apache", "bilirubin_apache", "bun_apache", "creatinine_apache", "glucose_apache",  "sodium_apache",  "wbc_apache"]
+
+ - name: "infusion_24h"
+   outcome: "infusion_24h"
+   predictors:  ["age", "gender","bmi", "icu_los_days",  "pre_icu_los_days", "aids", "immunosuppression", "leukemia", "cirrhosis", 
+     "hepatic_failure", "lymphoma", "solid_tumor_with_metastasis", 
+     "gcs_apache", "heart_rate_apache", "map_apache", "urineoutput_apache", "resprate_apache", "temp_apache", "fio2_apache",  "hematocrit_apache", 
+     "pao2_apache", "paco2_apache", "ph_apache", "albumin_apache", "bilirubin_apache", "bun_apache", "creatinine_apache", "glucose_apache",  "sodium_apache",  "wbc_apache"]
+
+ - name: "infusion_7d"
+   outcome: "infusion_7d"
+   predictors:  ["age", "gender","bmi", "icu_los_days",  "pre_icu_los_days", "aids", "immunosuppression", "leukemia", "cirrhosis", 
+     "hepatic_failure", "lymphoma", "solid_tumor_with_metastasis", 
+     "gcs_apache", "heart_rate_apache", "map_apache", "urineoutput_apache", "resprate_apache", "temp_apache", "fio2_apache",  "hematocrit_apache", 
+     "pao2_apache", "paco2_apache", "ph_apache", "albumin_apache", "bilirubin_apache", "bun_apache", "creatinine_apache", "glucose_apache",  "sodium_apache",  "wbc_apache"]
+ 
+ - name: "antibiotics_24h"
+   outcome: "antibiotics_24h"
+   predictors:  ["age", "gender","bmi", "icu_los_days",  "pre_icu_los_days", "aids", "immunosuppression", "leukemia", "cirrhosis", 
+     "hepatic_failure", "lymphoma", "solid_tumor_with_metastasis", 
+     "gcs_apache", "heart_rate_apache", "map_apache", "urineoutput_apache", "resprate_apache", "temp_apache", "fio2_apache",  "hematocrit_apache", 
+     "pao2_apache", "paco2_apache", "ph_apache", "albumin_apache", "bilirubin_apache", "bun_apache", "creatinine_apache", "glucose_apache",  "sodium_apache",  "wbc_apache"]
+ 
+ - name: "antibiotics_7d"
+   outcome: "antibiotics_7d"
+   predictors:  ["age", "gender","bmi", "icu_los_days",  "pre_icu_los_days", "aids", "immunosuppression", "leukemia", "cirrhosis", 
+     "hepatic_failure", "lymphoma", "solid_tumor_with_metastasis", 
+     "gcs_apache", "heart_rate_apache", "map_apache", "urineoutput_apache", "resprate_apache", "temp_apache", "fio2_apache",  "hematocrit_apache", 
+     "pao2_apache", "paco2_apache", "ph_apache", "albumin_apache", 
+     "bilirubin_apache", "bun_apache", "creatinine_apache", "glucose_apache",  "sodium_apache",  "wbc_apache"]
+ - name: "diabetes"
+   outcome: "diabetes"
+   predictors:  ["age", "gender","bmi", "icu_los_days",  "pre_icu_los_days", "aids", "immunosuppression", "leukemia", "cirrhosis", 
+     "hepatic_failure", "lymphoma", "solid_tumor_with_metastasis", 
+     "gcs_apache", "heart_rate_apache", "map_apache", "urineoutput_apache", "resprate_apache", "temp_apache", "fio2_apache",  "hematocrit_apache", 
+     "pao2_apache", "paco2_apache", "ph_apache", "albumin_apache", 
+     "bilirubin_apache", "bun_apache", "creatinine_apache",   "sodium_apache",  "wbc_apache"]
+
+    
